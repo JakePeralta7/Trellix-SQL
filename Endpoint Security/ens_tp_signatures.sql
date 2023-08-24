@@ -6,6 +6,6 @@ SELECT
 	[IPS_SignatureTextXlateMT].[SignatureFP] AS [false_positive],
 	[IPS_SignatureMT].[cveLink] AS [cve_link]
 FROM [IPS_SignatureTextXlateMT]
-/* Filter to en-us language */
+/* Filter to EN-US language */
 INNER JOIN [IPS_SignatureMT] ON [IPS_SignatureMT].[SignatureID] = [IPS_SignatureTextXlateMT].[SignatureID]
 WHERE [LanguageID] = 1033
